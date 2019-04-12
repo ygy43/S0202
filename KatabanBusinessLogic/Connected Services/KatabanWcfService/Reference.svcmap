@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="daf936cd-fd78-4736-b5e0-0dcc1feb49d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50545/DbAccessService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DbService.wsdl" MetadataType="Wsdl" ID="c4f72a25-d2f1-4522-bc50-e8657b481683" SourceId="1" SourceUrl="http://localhost:50545/DbAccessService.svc?wsdl" />
+    <MetadataFile FileName="DbAccessService3.xsd" MetadataType="Schema" ID="f9c3b4fa-4649-4b77-89b2-a66084bcfafb" SourceId="1" SourceUrl="http://localhost:50545/DbAccessService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DbAccessService2.xsd" MetadataType="Schema" ID="9dc05236-5fc1-4186-8e41-b98da50ac01d" SourceId="1" SourceUrl="http://localhost:50545/DbAccessService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DbAccessService1.xsd" MetadataType="Schema" ID="bccc0ae1-d835-4bfc-ae47-5738d0dbc371" SourceId="1" SourceUrl="http://localhost:50545/DbAccessService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DbAccessService.xsd" MetadataType="Schema" ID="edff10cc-4d9c-4e4b-95d1-371497cf1aaf" SourceId="1" SourceUrl="http://localhost:50545/DbAccessService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

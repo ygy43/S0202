@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D07203DF-B4F3-4C8C-8241-12BD4E740D80}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>S0202</RootNamespace>
+    <AssemblyName>S0202.KatabanWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>S0202.KatabanWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>S0202.KatabanWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\Classes\ProcessResult.vb" />
+    <Compile Include="Controllers\MenuController.vb" />
+    <Compile Include="Controllers\OptionsController.vb" />
+    <Compile Include="Controllers\PricesController.vb" />
+    <Compile Include="Controllers\RodEndController.vb" />
+    <Compile Include="Controllers\SeriesController.vb" />
+    <Compile Include="Filters\AuthorizeFilter.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MyHelpers\RodEndUnitViewModelModelBinder.vb" />
+    <Compile Include="MyHelpers\SessionHelper.vb" />
+    <Compile Include="MyHelpers\UserHelper.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="MyHelpers\MyPrincipal.vb" />
+    <Compile Include="Resources\Layout\RLayout.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RLayout.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Login\RLogin.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RLogin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Options\ROptions.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ROptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Options\RRodEnd.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RRodEnd.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Account\LoginViewModel.vb" />
+    <Compile Include="ViewModels\Account\ResetPasswordViewModel.vb" />
+    <Compile Include="ViewModels\Menu\MenuIndexViewModel.vb" />
+    <Compile Include="ViewModels\Options\OptionsIndexViewModel.vb" />
+    <Compile Include="ViewModels\Options\OptionsUpdateOptionsViewModel.vb" />
+    <Compile Include="ViewModels\Options\RodEndUnitViewModel.vb" />
+    <Compile Include="ViewModels\Options\RodEndViewModel.vb" />
+    <Compile Include="ViewModels\Prices\PricesIndexViewModel.vb" />
+    <Compile Include="ViewModels\Prices\SelectedPriceInfo.vb" />
+    <Compile Include="ViewModels\Series\SeriesSearchViewModel.vb" />
+    <EmbeddedResource Include="Resources\Layout\RLayout.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Layout\RLayout.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\Layout\RLayout.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RLayout.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Layout\RLayout.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\Layout\RLayout.zh-TW.resx" />
+    <EmbeddedResource Include="Resources\Login\RLogin.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Login\RLogin.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RLogin.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Options\ROptions.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Options\ROptions.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ROptions.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Options\RRodEnd.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RRodEnd.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-simplex.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\arrow.png" />
+    <Content Include="Content\Images\ckd\Collapsing.gif" />
+    <Content Include="Content\Images\ckd\en\DirectionalControlValve.png" />
+    <Content Include="Content\Images\ckd\en\Test.png" />
+    <Content Include="Content\Images\ckd\Expanding.gif" />
+    <Content Include="Content\Images\ckd\ja\DirectionalControlValve.png" />
+    <Content Include="Content\Images\ckd\ja\Test.png" />
+    <Content Include="Content\Images\ckd\ko\DirectionalControlValve.png" />
+    <Content Include="Content\Images\ckd\ko\Test.png" />
+    <Content Include="Content\Images\ckd\tw\DirectionalControlValve.png" />
+    <Content Include="Content\Images\ckd\tw\Test.png" />
+    <Content Include="Content\Images\ckd\zh\DirectionalControlValve.png" />
+    <Content Include="Content\Images\ckd\zh\Test.png" />
+    <Content Include="Content\Images\CMK2RodN1.gif" />
+    <Content Include="Content\Images\CMK2RodN11-N13.gif" />
+    <Content Include="Content\Images\CMK2RodN11.gif" />
+    <Content Include="Content\Images\CMK2RodN12.gif" />
+    <Content Include="Content\Images\CMK2RodN13-N11.gif" />
+    <Content Include="Content\Images\CMK2RodN13.gif" />
+    <Content Include="Content\Images\CMK2RodN14.gif" />
+    <Content Include="Content\Images\CMK2RodN15.gif" />
+    <Content Include="Content\Images\CMK2RodN2.gif" />
+    <Content Include="Content\Images\CMK2RodN21.gif" />
+    <Content Include="Content\Images\CMK2RodN3.gif" />
+    <Content Include="Content\Images\CMK2RodN31.gif" />
+    <Content Include="Content\Images\EKSListChina.gif" />
+    <Content Include="Content\Images\EKSListEnglish.gif" />
+    <Content Include="Content\Images\EKSListJapan.gif" />
+    <Content Include="Content\Images\EKSListKorea.gif" />
+    <Content Include="Content\Images\EKSListTaiwan.gif" />
+    <Content Include="Content\Images\ESMMotorChina.gif" />
+    <Content Include="Content\Images\ESMMotorEnglish.gif" />
+    <Content Include="Content\Images\ESMMotorJapan.gif" />
+    <Content Include="Content\Images\ESMMotorKorea.gif" />
+    <Content Include="Content\Images\ESMMotorTaiwan.gif" />
+    <Content Include="Content\Images\ETS-AMotorChina.gif" />
+    <Content Include="Content\Images\ETS-AMotorEnglish.gif" />
+    <Content Include="Content\Images\ETS-AMotorJapan.gif" />
+    <Content Include="Content\Images\ETS-AMotorKorea.gif" />
+    <Content Include="Content\Images\ETS-AMotorTaiwan.gif" />
+    <Content Include="Content\Images\ETS-FMotorChina.gif" />
+    <Content Include="Content\Images\ETS-FMotorEnglish.gif" />
+    <Content Include="Content\Images\ETS-FMotorJapan.gif" />
+    <Content Include="Content\Images\ETS-FMotorKorea.gif" />
+    <Content Include="Content\Images\ETS-FMotorTaiwan.gif" />
+    <Content Include="Content\Images\ETS-GMotorChina.gif" />
+    <Content Include="Content\Images\ETS-GMotorEnglish.gif" />
+    <Content Include="Content\Images\ETS-GMotorJapan.gif" />
+    <Content Include="Content\Images\ETS-GMotorKorea.gif" />
+    <Content Include="Content\Images\ETS-GMotorTaiwan.gif" />
+    <Content Include="Content\Images\ETS-PMotorChina.gif" />
+    <Content Include="Content\Images\ETS-PMotorEnglish.gif" />
+    <Content Include="Content\Images\ETS-PMotorJapan.gif" />
+    <Content Include="Content\Images\ETS-PMotorKorea.gif" />
+    <Content Include="Content\Images\ETS-PMotorTaiwan.gif" />
+    <Content Include="Content\Images\ETSMotorChina.gif" />
+    <Content Include="Content\Images\ETSMotorEnglish.gif" />
+    <Content Include="Content\Images\ETSMotorJapan.gif" />
+    <Content Include="Content\Images\ETSMotorKorea.gif" />
+    <Content Include="Content\Images\ETSMotorTaiwan.gif" />
+    <Content Include="Content\Images\FixedMessage1.gif" />
+    <Content Include="Content\Images\FixedMessage2.gif" />
+    <Content Include="Content\Images\IAVBPortPosition.gif" />
+    <Content Include="Content\Images\JSC3RodN1%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN1.gif" />
+    <Content Include="Content\Images\JSC3RodN11%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN11.gif" />
+    <Content Include="Content\Images\JSC3RodN12%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN12.gif" />
+    <Content Include="Content\Images\JSC3RodN13%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN13.gif" />
+    <Content Include="Content\Images\JSC3RodN14%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN14.gif" />
+    <Content Include="Content\Images\JSC3RodN15%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN15.gif" />
+    <Content Include="Content\Images\JSC3RodN2%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN2.gif" />
+    <Content Include="Content\Images\JSC3RodN21%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN21.gif" />
+    <Content Include="Content\Images\JSC3RodN3%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN3.gif" />
+    <Content Include="Content\Images\JSC3RodN31%28FA%29.gif" />
+    <Content Include="Content\Images\JSC3RodN31.gif" />
+    <Content Include="Content\Images\LCGStop.gif" />
+    <Content Include="Content\Images\LCRStop.gif" />
+    <Content Include="Content\Images\Loading.gif" />
+    <Content Include="Content\Images\logo.bmp" />
+    <Content Include="Content\Images\logo1.gif" />
+    <Content Include="Content\Images\logo2.gif" />
+    <Content Include="Content\Images\logo3.gif" />
+    <Content Include="Content\Images\logo4.gif" />
+    <Content Include="Content\Images\logo4.jpg" />
+    <Content Include="Content\Images\outOp1.gif" />
+    <Content Include="Content\Images\outOp2.gif" />
+    <Content Include="Content\Images\outOp3.gif" />
+    <Content Include="Content\Images\outOp4.gif" />
+    <Content Include="Content\Images\outOp5_JSC3_1.gif" />
+    <Content Include="Content\Images\outOp5_JSC3_2.gif" />
+    <Content Include="Content\Images\outOp5_SCS.gif" />
+    <Content Include="Content\Images\SCA2RodN1.gif" />
+    <Content Include="Content\Images\SCA2RodN11.gif" />
+    <Content Include="Content\Images\SCA2RodN11N13.gif" />
+    <Content Include="Content\Images\SCA2RodN12.gif" />
+    <Content Include="Content\Images\SCA2RodN13.gif" />
+    <Content Include="Content\Images\SCA2RodN13N11.gif" />
+    <Content Include="Content\Images\SCA2RodN14.gif" />
+    <Content Include="Content\Images\SCA2RodN15.gif" />
+    <Content Include="Content\Images\SCA2RodN2.gif" />
+    <Content Include="Content\Images\SCA2RodN21.gif" />
+    <Content Include="Content\Images\SCA2RodN3.gif" />
+    <Content Include="Content\Images\SCA2RodN31.gif" />
+    <Content Include="Content\Images\SCSRodN1.gif" />
+    <Content Include="Content\Images\SCSRodN11.gif" />
+    <Content Include="Content\Images\SCSRodN12.gif" />
+    <Content Include="Content\Images\SCSRodN13.gif" />
+    <Content Include="Content\Images\SCSRodN13N11.gif" />
+    <Content Include="Content\Images\SCSRodN14.gif" />
+    <Content Include="Content\Images\SCSRodN15.gif" />
+    <Content Include="Content\Images\SCSRodN2.gif" />
+    <Content Include="Content\Images\SCSRodN21.gif" />
+    <Content Include="Content\Images\SCSRodN3.gif" />
+    <Content Include="Content\Images\SCSRodN31.gif" />
+    <Content Include="Content\Images\smc\1.png" />
+    <Content Include="Content\Images\smc\2.png" />
+    <Content Include="Content\Images\smc\actuators.png" />
+    <Content Include="Content\Images\smc\fittings_and_tubing.png" />
+    <Content Include="Content\Images\smc\ic_folder_close.gif" />
+    <Content Include="Content\Images\smc\ic_folder_open.gif" />
+    <Content Include="Content\Images\SSDRodN1.gif" />
+    <Content Include="Content\Images\SSDRodN11.gif" />
+    <Content Include="Content\Images\SSDRodN11N13.gif" />
+    <Content Include="Content\Images\SSDRodN12.gif" />
+    <Content Include="Content\Images\SSDRodN13.gif" />
+    <Content Include="Content\Images\SSDRodN13N11.gif" />
+    <Content Include="Content\Images\SSDRodN14.gif" />
+    <Content Include="Content\Images\SSDRodN15.gif" />
+    <Content Include="Content\Images\SSDRodN2.gif" />
+    <Content Include="Content\Images\SSDRodN21.gif" />
+    <Content Include="Content\Images\SSDRodN3.gif" />
+    <Content Include="Content\Images\SSDRodN31.gif" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Views\Account\Login.vbhtml" />
+    <Content Include="Views\Account\ResetPassword.vbhtml" />
+    <Content Include="Views\Menu\Index.vbhtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.vbhtml" />
+    <Content Include="Views\Shared\_LoginPartial.vbhtml" />
+    <Content Include="Views\Series\Search.vbhtml" />
+    <Content Include="Views\Options\Index.vbhtml" />
+    <Content Include="Views\Prices\Index.vbhtml" />
+    <Content Include="Views\Shared\_CurrentOptions.vbhtml" />
+    <Content Include="Views\Shared\_Languages.vbhtml" />
+    <Content Include="Views\Shared\_SeriesList.vbhtml" />
+    <Content Include="Views\Options\OtherOption.vbhtml" />
+    <Content Include="Views\Options\Stopper.vbhtml" />
+    <Content Include="Views\Options\Motor1.vbhtml" />
+    <Content Include="Views\Options\Motor2.vbhtml" />
+    <Content Include="Views\Options\PortPosition.vbhtml" />
+    <Content Include="Views\Options\Stock.vbhtml" />
+    <Content Include="Views\Shared\_RodEndUnitNormal.vbhtml" />
+    <Content Include="Views\Shared\_RodEndUnitOther.vbhtml" />
+    <Content Include="Views\Shared\_RodEndUnitImageOnly.vbhtml" />
+    <Content Include="Views\RodEnd\Index.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Home\About.vbhtml" />
+    <Content Include="Views\Home\Contact.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KatabanBusinessLogic\KatabanBusinessLogic.vbproj">
+      <Project>{be151698-3b73-4851-8efa-18f787bde45e}</Project>
+      <Name>KatabanBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KatabanCommon\KatabanCommon.vbproj">
+      <Project>{a98cf183-327d-42f8-b953-dbb2aacdcdb0}</Project>
+      <Name>KatabanCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50527</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50527/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

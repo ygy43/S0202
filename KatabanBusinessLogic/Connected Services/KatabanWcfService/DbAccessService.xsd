@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/S0202.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/S0202.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserInfo" nillable="true" type="tns:UserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserInfo" nillable="true" type="tns:ArrayOfUserInfo" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="add_information_lvl" type="xs:int" />
+      <xs:element minOccurs="0" name="base_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="current_datetime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="edit_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="language_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mail_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="office_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="person_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price_disp_lvl" type="xs:int" />
+      <xs:element minOccurs="0" name="use_function_lvl" type="xs:int" />
+      <xs:element minOccurs="0" name="user_class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="ArrayOfUpdateHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UpdateHistory" nillable="true" type="tns:UpdateHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUpdateHistory" nillable="true" type="tns:ArrayOfUpdateHistory" />
+  <xs:complexType name="UpdateHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="language_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="seq_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateHistory" nillable="true" type="tns:UpdateHistory" />
+  <xs:complexType name="ArrayOfSeriesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeriesInfo" nillable="true" type="tns:SeriesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeriesInfo" nillable="true" type="tns:ArrayOfSeriesInfo" />
+  <xs:complexType name="SeriesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="division" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hyphen_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="key_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="series_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sort_key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="spec_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeriesInfo" nillable="true" type="tns:SeriesInfo" />
+  <xs:complexType name="ArrayOfSeriesInfoFullKataban">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeriesInfoFullKataban" nillable="true" type="tns:SeriesInfoFullKataban" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeriesInfoFullKataban" nillable="true" type="tns:ArrayOfSeriesInfoFullKataban" />
+  <xs:complexType name="SeriesInfoFullKataban">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="currency_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="division" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hyphen_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kataban_check_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="key_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="model_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parts_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="series_kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sort_key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="spec_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeriesInfoFullKataban" nillable="true" type="tns:SeriesInfoFullKataban" />
+  <xs:complexType name="ArrayOfKatabanStructureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KatabanStructureInfo" nillable="true" type="tns:KatabanStructureInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKatabanStructureInfo" nillable="true" type="tns:ArrayOfKatabanStructureInfo" />
+  <xs:complexType name="KatabanStructureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PluralGroupData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="addition_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="default_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="element_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hyphen_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ktbn_strc_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ktbn_strc_seq_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="structure_div" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KatabanStructureInfo" nillable="true" type="tns:KatabanStructureInfo" />
+  <xs:complexType name="ArrayOfKatabanStructureOptionInfoAllSeqNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KatabanStructureOptionInfoAllSeqNo" nillable="true" type="tns:KatabanStructureOptionInfoAllSeqNo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKatabanStructureOptionInfoAllSeqNo" nillable="true" type="tns:ArrayOfKatabanStructureOptionInfoAllSeqNo" />
+  <xs:complexType name="KatabanStructureOptionInfoAllSeqNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ktbn_strc_seq_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="option_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="place_lvl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KatabanStructureOptionInfoAllSeqNo" nillable="true" type="tns:KatabanStructureOptionInfoAllSeqNo" />
+  <xs:complexType name="ArrayOfKatabanStructureOptionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KatabanStructureOptionInfo" nillable="true" type="tns:KatabanStructureOptionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKatabanStructureOptionInfo" nillable="true" type="tns:ArrayOfKatabanStructureOptionInfo" />
+  <xs:complexType name="KatabanStructureOptionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="default_option_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_seq_no" type="xs:int" />
+      <xs:element minOccurs="0" name="option_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="option_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="place_lvl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price_acc_div" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KatabanStructureOptionInfo" nillable="true" type="tns:KatabanStructureOptionInfo" />
+  <xs:complexType name="ArrayOfElePatternInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ElePatternInfo" nillable="true" type="tns:ElePatternInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfElePatternInfo" nillable="true" type="tns:ArrayOfElePatternInfo" />
+  <xs:complexType name="ElePatternInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cond_option_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="condition_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="condition_seq_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="condition_seq_no_br" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="option_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="search_seq_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElePatternInfo" nillable="true" type="tns:ElePatternInfo" />
+  <xs:complexType name="ArrayOfRodEndInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RodEndInfo" nillable="true" type="tns:RodEndInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRodEndInfo" nillable="true" type="tns:ArrayOfRodEndInfo" />
+  <xs:complexType name="RodEndInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pattern_seq_no" type="xs:int" />
+      <xs:element minOccurs="0" name="rod_pattern_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RodEndInfo" nillable="true" type="tns:RodEndInfo" />
+  <xs:complexType name="ArrayOfRodEndExternalFormInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RodEndExternalFormInfo" nillable="true" type="tns:RodEndExternalFormInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRodEndExternalFormInfo" nillable="true" type="tns:ArrayOfRodEndExternalFormInfo" />
+  <xs:complexType name="RodEndExternalFormInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="act_normal_value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="act_selectable_value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="disp_external_form" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="external_form" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="input_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="js_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="normal_value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pattern_seq_no" type="xs:int" />
+      <xs:element minOccurs="0" name="rod_pattern_symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="selectable_value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RodEndExternalFormInfo" nillable="true" type="tns:RodEndExternalFormInfo" />
+  <xs:complexType name="PriceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bs_price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="country_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country_group_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gs_price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kataban_check_div" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ls_price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="place_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ps_price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="rg_price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ss_price" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceInfo" nillable="true" type="tns:PriceInfo" />
+  <xs:complexType name="ScrewPriceInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PriceInfo">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScrewPriceInfo" nillable="true" type="tns:ScrewPriceInfo" />
+  <xs:complexType name="MathTypeInfoLocalPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="list_price_rate1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="list_price_rate2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="mathPosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mathType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MathTypeInfoLocalPrice" nillable="true" type="tns:MathTypeInfoLocalPrice" />
+  <xs:complexType name="MathTypeInfoFobPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authorization_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fob_rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="mathPosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mathType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MathTypeInfoFobPrice" nillable="true" type="tns:MathTypeInfoFobPrice" />
+  <xs:complexType name="QuantityUnitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="default_unit_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_lot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qty_unit_nm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="quantity_per_sales_unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sales_unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sap_base_unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuantityUnitInfo" nillable="true" type="tns:QuantityUnitInfo" />
+  <xs:complexType name="StockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shipment_qty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stock_content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stock_place_cd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stock_qty" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockInfo" nillable="true" type="tns:StockInfo" />
+  <xs:complexType name="ArrayOfStrokeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StrokeInfo" nillable="true" type="tns:StrokeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStrokeInfo" nillable="true" type="tns:ArrayOfStrokeInfo" />
+  <xs:complexType name="StrokeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="max_stroke" type="xs:int" />
+      <xs:element minOccurs="0" name="min_stroke" type="xs:int" />
+      <xs:element minOccurs="0" name="std_stroke" type="xs:int" />
+      <xs:element minOccurs="0" name="stroke_unit" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StrokeInfo" nillable="true" type="tns:StrokeInfo" />
+  <xs:complexType name="ArrayOfVoltageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VoltageInfo" nillable="true" type="tns:VoltageInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVoltageInfo" nillable="true" type="tns:ArrayOfVoltageInfo" />
+  <xs:complexType name="VoltageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="max_voltage" type="xs:int" />
+      <xs:element minOccurs="0" name="min_voltage" type="xs:int" />
+      <xs:element minOccurs="0" name="std_voltage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="std_voltage_flag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VoltageInfo" nillable="true" type="tns:VoltageInfo" />
+</xs:schema>

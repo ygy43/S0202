@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DbService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/S0202.Models" />
+      <xsd:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDbAccessService_SelectUserMstByUserIdAndPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserMstByUserIdAndPassword" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectUserMstByUserIdAndPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserMstByUserIdAndPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_UpdateUserMstPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserMstPassword" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_UpdateUserMstPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserMstPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectInformationByLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInformationByLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectInformationByLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInformationByLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoBySeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoBySeries" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoBySeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoBySeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoCountBySeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoCountBySeries" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoCountBySeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoCountBySeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyBySeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyBySeries" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyBySeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyBySeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoByFullKataban_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoByFullKataban" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoByFullKataban_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoByFullKatabanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoCountByFullKataban_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoCountByFullKataban" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoCountByFullKataban_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoCountByFullKatabanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyByFullKataban_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyByFullKataban" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyByFullKataban_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyByFullKatabanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoByShiire_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoByShiire" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoByShiire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoByShiireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyByShiire_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyByShiire" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectSeriesInfoWithKeyByShiire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSeriesInfoWithKeyByShiireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructure" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructureOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructureOptions" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructureOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructureOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructureOptionsBySeqNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructureOptionsBySeqNo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectKatabanStructureOptionsBySeqNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKatabanStructureOptionsBySeqNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectElePatternInfoAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectElePatternInfoAll" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectElePatternInfoAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectElePatternInfoAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectElePatternInfoPlural_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectElePatternInfoPlural" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectElePatternInfoPlural_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectElePatternInfoPluralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectRodEndInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRodEndInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectRodEndInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRodEndInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectRodEndExternalFormInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRodEndExternalFormInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectRodEndExternalFormInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRodEndExternalFormInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectWfMaxValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWfMaxValue" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectWfMaxValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWfMaxValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectFullKatabanPriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectFullKatabanPriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectFullKatabanPriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectFullKatabanPriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectAccumulatePriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAccumulatePriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectAccumulatePriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAccumulatePriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectScrewPriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectScrewPriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectScrewPriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectScrewPriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_AddPriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_AddPriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_MinusPriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:MinusPriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_MinusPriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinusPriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_MultiplePriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_MultiplePriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectExchangeRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectExchangeRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectMathTypeLocalPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMathTypeLocalPrice" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectMathTypeLocalPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMathTypeLocalPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectMathTypeFobPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMathTypeFobPrice" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectMathTypeFobPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMathTypeFobPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectQuantityUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectQuantityUnit" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectQuantityUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectQuantityUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_CheckEl_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEl" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_CheckEl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckElResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStock" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectStroke_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStroke" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectStroke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStrokeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectVoltageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVoltageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDbAccessService_SelectVoltageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVoltageInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDbAccessService">
+    <wsdl:operation name="SelectUserMstByUserIdAndPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectUserMstByUserIdAndPassword" message="tns:IDbAccessService_SelectUserMstByUserIdAndPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectUserMstByUserIdAndPasswordResponse" message="tns:IDbAccessService_SelectUserMstByUserIdAndPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserMstPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/UpdateUserMstPassword" message="tns:IDbAccessService_UpdateUserMstPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/UpdateUserMstPasswordResponse" message="tns:IDbAccessService_UpdateUserMstPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectInformationByLanguage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectInformationByLanguage" message="tns:IDbAccessService_SelectInformationByLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectInformationByLanguageResponse" message="tns:IDbAccessService_SelectInformationByLanguage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoBySeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoBySeries" message="tns:IDbAccessService_SelectSeriesInfoBySeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoBySeriesResponse" message="tns:IDbAccessService_SelectSeriesInfoBySeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoCountBySeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountBySeries" message="tns:IDbAccessService_SelectSeriesInfoCountBySeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountBySeriesResponse" message="tns:IDbAccessService_SelectSeriesInfoCountBySeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyBySeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyBySeries" message="tns:IDbAccessService_SelectSeriesInfoWithKeyBySeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyBySeriesResponse" message="tns:IDbAccessService_SelectSeriesInfoWithKeyBySeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoByFullKataban">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoByFullKataban" message="tns:IDbAccessService_SelectSeriesInfoByFullKataban_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoByFullKatabanResponse" message="tns:IDbAccessService_SelectSeriesInfoByFullKataban_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoCountByFullKataban">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountByFullKataban" message="tns:IDbAccessService_SelectSeriesInfoCountByFullKataban_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountByFullKatabanResponse" message="tns:IDbAccessService_SelectSeriesInfoCountByFullKataban_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyByFullKataban">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByFullKataban" message="tns:IDbAccessService_SelectSeriesInfoWithKeyByFullKataban_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByFullKatabanResponse" message="tns:IDbAccessService_SelectSeriesInfoWithKeyByFullKataban_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoByShiire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoByShiire" message="tns:IDbAccessService_SelectSeriesInfoByShiire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoByShiireResponse" message="tns:IDbAccessService_SelectSeriesInfoByShiire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyByShiire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByShiire" message="tns:IDbAccessService_SelectSeriesInfoWithKeyByShiire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByShiireResponse" message="tns:IDbAccessService_SelectSeriesInfoWithKeyByShiire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructure" message="tns:IDbAccessService_SelectKatabanStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructureResponse" message="tns:IDbAccessService_SelectKatabanStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructureOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptions" message="tns:IDbAccessService_SelectKatabanStructureOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptionsResponse" message="tns:IDbAccessService_SelectKatabanStructureOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructureOptionsBySeqNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptionsBySeqNo" message="tns:IDbAccessService_SelectKatabanStructureOptionsBySeqNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptionsBySeqNoResponse" message="tns:IDbAccessService_SelectKatabanStructureOptionsBySeqNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectElePatternInfoAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectElePatternInfoAll" message="tns:IDbAccessService_SelectElePatternInfoAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectElePatternInfoAllResponse" message="tns:IDbAccessService_SelectElePatternInfoAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectElePatternInfoPlural">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectElePatternInfoPlural" message="tns:IDbAccessService_SelectElePatternInfoPlural_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectElePatternInfoPluralResponse" message="tns:IDbAccessService_SelectElePatternInfoPlural_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRodEndInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectRodEndInfo" message="tns:IDbAccessService_SelectRodEndInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectRodEndInfoResponse" message="tns:IDbAccessService_SelectRodEndInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRodEndExternalFormInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectRodEndExternalFormInfo" message="tns:IDbAccessService_SelectRodEndExternalFormInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectRodEndExternalFormInfoResponse" message="tns:IDbAccessService_SelectRodEndExternalFormInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWfMaxValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectWfMaxValue" message="tns:IDbAccessService_SelectWfMaxValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectWfMaxValueResponse" message="tns:IDbAccessService_SelectWfMaxValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFullKatabanPriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectFullKatabanPriceInfo" message="tns:IDbAccessService_SelectFullKatabanPriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectFullKatabanPriceInfoResponse" message="tns:IDbAccessService_SelectFullKatabanPriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAccumulatePriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectAccumulatePriceInfo" message="tns:IDbAccessService_SelectAccumulatePriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectAccumulatePriceInfoResponse" message="tns:IDbAccessService_SelectAccumulatePriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectScrewPriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectScrewPriceInfo" message="tns:IDbAccessService_SelectScrewPriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectScrewPriceInfoResponse" message="tns:IDbAccessService_SelectScrewPriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/AddPriceInfo" message="tns:IDbAccessService_AddPriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/AddPriceInfoResponse" message="tns:IDbAccessService_AddPriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MinusPriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/MinusPriceInfo" message="tns:IDbAccessService_MinusPriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/MinusPriceInfoResponse" message="tns:IDbAccessService_MinusPriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/MultiplePriceInfo" message="tns:IDbAccessService_MultiplePriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/MultiplePriceInfoResponse" message="tns:IDbAccessService_MultiplePriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectExchangeRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectExchangeRate" message="tns:IDbAccessService_SelectExchangeRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectExchangeRateResponse" message="tns:IDbAccessService_SelectExchangeRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMathTypeLocalPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectMathTypeLocalPrice" message="tns:IDbAccessService_SelectMathTypeLocalPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectMathTypeLocalPriceResponse" message="tns:IDbAccessService_SelectMathTypeLocalPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMathTypeFobPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectMathTypeFobPrice" message="tns:IDbAccessService_SelectMathTypeFobPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectMathTypeFobPriceResponse" message="tns:IDbAccessService_SelectMathTypeFobPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectQuantityUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectQuantityUnit" message="tns:IDbAccessService_SelectQuantityUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectQuantityUnitResponse" message="tns:IDbAccessService_SelectQuantityUnit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/CheckEl" message="tns:IDbAccessService_CheckEl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/CheckElResponse" message="tns:IDbAccessService_CheckEl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectStock" message="tns:IDbAccessService_SelectStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectStockResponse" message="tns:IDbAccessService_SelectStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectStroke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectStroke" message="tns:IDbAccessService_SelectStroke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectStrokeResponse" message="tns:IDbAccessService_SelectStroke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVoltageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbAccessService/SelectVoltageInfo" message="tns:IDbAccessService_SelectVoltageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbAccessService/SelectVoltageInfoResponse" message="tns:IDbAccessService_SelectVoltageInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDbAccessService" type="tns:IDbAccessService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectUserMstByUserIdAndPassword">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectUserMstByUserIdAndPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserMstPassword">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/UpdateUserMstPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectInformationByLanguage">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectInformationByLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoBySeries">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoBySeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoCountBySeries">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountBySeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyBySeries">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyBySeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoByFullKataban">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoByFullKataban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoCountByFullKataban">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoCountByFullKataban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyByFullKataban">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByFullKataban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoByShiire">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoByShiire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSeriesInfoWithKeyByShiire">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectSeriesInfoWithKeyByShiire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructure">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectKatabanStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructureOptions">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKatabanStructureOptionsBySeqNo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectKatabanStructureOptionsBySeqNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectElePatternInfoAll">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectElePatternInfoAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectElePatternInfoPlural">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectElePatternInfoPlural" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRodEndInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectRodEndInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRodEndExternalFormInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectRodEndExternalFormInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWfMaxValue">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectWfMaxValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFullKatabanPriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectFullKatabanPriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAccumulatePriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectAccumulatePriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectScrewPriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectScrewPriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/AddPriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MinusPriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/MinusPriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePriceInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/MultiplePriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectExchangeRate">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMathTypeLocalPrice">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectMathTypeLocalPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMathTypeFobPrice">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectMathTypeFobPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectQuantityUnit">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectQuantityUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEl">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/CheckEl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectStock">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectStroke">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectStroke" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVoltageInfo">
+      <soap:operation soapAction="http://tempuri.org/IDbAccessService/SelectVoltageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DbService">
+    <wsdl:port name="BasicHttpBinding_IDbAccessService" binding="tns:BasicHttpBinding_IDbAccessService">
+      <soap:address location="http://localhost:50545/DbAccessService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

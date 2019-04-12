@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/S0202.Models" />
+  <xs:import schemaLocation="http://localhost:50545/DbAccessService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="SelectUserMstByUserIdAndPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUserMstByUserIdAndPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectUserMstByUserIdAndPasswordResult" nillable="true" type="q1:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserMstPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserMstPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserMstPasswordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInformationByLanguage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInformationByLanguageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectInformationByLanguageResult" nillable="true" type="q2:ArrayOfUpdateHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoBySeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="input" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoBySeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoBySeriesResult" nillable="true" type="q3:ArrayOfSeriesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoCountBySeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="input" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoCountBySeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectSeriesInfoCountBySeriesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyBySeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyBySeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoWithKeyBySeriesResult" nillable="true" type="q4:SeriesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoByFullKataban">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="input" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoByFullKatabanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoByFullKatabanResult" nillable="true" type="q5:ArrayOfSeriesInfoFullKataban" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoCountByFullKataban">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="input" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoCountByFullKatabanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectSeriesInfoCountByFullKatabanResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyByFullKataban">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyByFullKatabanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoWithKeyByFullKatabanResult" nillable="true" type="q6:SeriesInfoFullKataban" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoByShiire">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoByShiireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoByShiireResult" nillable="true" type="q7:ArrayOfSeriesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyByShiire">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSeriesInfoWithKeyByShiireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectSeriesInfoWithKeyByShiireResult" nillable="true" type="q8:SeriesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectKatabanStructureResult" nillable="true" type="q9:ArrayOfKatabanStructureInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructureOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructureOptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectKatabanStructureOptionsResult" nillable="true" type="q10:ArrayOfKatabanStructureOptionInfoAllSeqNo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructureOptionsBySeqNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seqNo" type="xs:int" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectKatabanStructureOptionsBySeqNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectKatabanStructureOptionsBySeqNoResult" nillable="true" type="q11:ArrayOfKatabanStructureOptionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElePatternInfoAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seqNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElePatternInfoAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectElePatternInfoAllResult" nillable="true" type="q12:ArrayOfElePatternInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElePatternInfoPlural">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seqNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElePatternInfoPluralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectElePatternInfoPluralResult" nillable="true" type="q13:ArrayOfElePatternInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRodEndInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRodEndInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectRodEndInfoResult" nillable="true" type="q14:ArrayOfRodEndInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRodEndExternalFormInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boreSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRodEndExternalFormInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectRodEndExternalFormInfoResult" nillable="true" type="q15:ArrayOfRodEndExternalFormInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWfMaxValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boreSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWfMaxValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectWfMaxValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFullKatabanPriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFullKatabanPriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectFullKatabanPriceInfoResult" nillable="true" type="q16:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAccumulatePriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAccumulatePriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectAccumulatePriceInfoResult" nillable="true" type="q17:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectScrewPriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectScrewPriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectScrewPriceInfoResult" nillable="true" type="q18:ScrewPriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="price1" nillable="true" type="q19:PriceInfo" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="price2" nillable="true" type="q20:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="AddPriceInfoResult" nillable="true" type="q21:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinusPriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="price1" nillable="true" type="q22:PriceInfo" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="price2" nillable="true" type="q23:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinusPriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="MinusPriceInfoResult" nillable="true" type="q24:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MultiplePriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="price" nillable="true" type="q25:PriceInfo" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="multiple" nillable="true" type="q26:ArrayOfdecimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MultiplePriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="MultiplePriceInfoResult" nillable="true" type="q27:PriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectExchangeRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="katabanCurrency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userCurrency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectExchangeRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectExchangeRateResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMathTypeLocalPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="katabanFirstHyphen" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMathTypeLocalPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectMathTypeLocalPriceResult" nillable="true" type="q28:MathTypeInfoLocalPrice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMathTypeFobPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="katabanFirstHyphen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipPlace" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMathTypeFobPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectMathTypeFobPriceResult" nillable="true" type="q29:MathTypeInfoFobPrice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectQuantityUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectQuantityUnitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectQuantityUnitResult" nillable="true" type="q30:QuantityUnitInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="elFlag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckElResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckElResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipPlace" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectStockResult" nillable="true" type="q31:StockInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStroke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boreSize" type="xs:int" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStrokeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectStrokeResult" nillable="true" type="q32:ArrayOfStrokeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectVoltageInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="series" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="portSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="coil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="voltageDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="voltage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectVoltageInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/S0202.Models" minOccurs="0" name="SelectVoltageInfoResult" nillable="true" type="q33:ArrayOfVoltageInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

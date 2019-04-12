@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanWeb", "KatabanWeb\KatabanWeb.vbproj", "{D07203DF-B4F3-4C8C-8241-12BD4E740D80}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanWin", "KatabanWin\KatabanWin.vbproj", "{1BF237C7-448A-4FD2-9050-933E77B864D4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanWcfService", "KatabanWcfService\KatabanWcfService.vbproj", "{6EB21D6C-6A0E-4287-9854-736AF0F93666}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanTest", "KatabanTest\KatabanTest.vbproj", "{FC04B9B2-4D4B-43E5-83B2-8A1D11898964}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanBusinessLogic", "KatabanBusinessLogic\KatabanBusinessLogic.vbproj", "{BE151698-3B73-4851-8EFA-18F787BDE45E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EB21D6C-6A0E-4287-9854-736AF0F93666} = {6EB21D6C-6A0E-4287-9854-736AF0F93666}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KatabanCommon", "KatabanCommon\KatabanCommon.vbproj", "{A98CF183-327D-42F8-B953-DBB2AACDCDB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D07203DF-B4F3-4C8C-8241-12BD4E740D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07203DF-B4F3-4C8C-8241-12BD4E740D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07203DF-B4F3-4C8C-8241-12BD4E740D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07203DF-B4F3-4C8C-8241-12BD4E740D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF237C7-448A-4FD2-9050-933E77B864D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF237C7-448A-4FD2-9050-933E77B864D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF237C7-448A-4FD2-9050-933E77B864D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF237C7-448A-4FD2-9050-933E77B864D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB21D6C-6A0E-4287-9854-736AF0F93666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB21D6C-6A0E-4287-9854-736AF0F93666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB21D6C-6A0E-4287-9854-736AF0F93666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB21D6C-6A0E-4287-9854-736AF0F93666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC04B9B2-4D4B-43E5-83B2-8A1D11898964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC04B9B2-4D4B-43E5-83B2-8A1D11898964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC04B9B2-4D4B-43E5-83B2-8A1D11898964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC04B9B2-4D4B-43E5-83B2-8A1D11898964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE151698-3B73-4851-8EFA-18F787BDE45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE151698-3B73-4851-8EFA-18F787BDE45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE151698-3B73-4851-8EFA-18F787BDE45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE151698-3B73-4851-8EFA-18F787BDE45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98CF183-327D-42F8-B953-DBB2AACDCDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98CF183-327D-42F8-B953-DBB2AACDCDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98CF183-327D-42F8-B953-DBB2AACDCDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98CF183-327D-42F8-B953-DBB2AACDCDB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13A80BC4-8954-4C44-8100-50569235385F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nkcs:8080/tfs/ckd%20projects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = KatabanBusinessLogic\\KatabanBusinessLogic.vbproj
+		SccProjectName1 = KatabanBusinessLogic
+		SccLocalPath1 = KatabanBusinessLogic
+		SccProjectUniqueName2 = KatabanCommon\\KatabanCommon.vbproj
+		SccProjectName2 = KatabanCommon
+		SccLocalPath2 = KatabanCommon
+		SccProjectUniqueName3 = KatabanTest\\KatabanTest.vbproj
+		SccProjectName3 = KatabanTest
+		SccLocalPath3 = KatabanTest
+		SccProjectUniqueName4 = KatabanWcfService\\KatabanWcfService.vbproj
+		SccProjectName4 = KatabanWcfService
+		SccLocalPath4 = KatabanWcfService
+		SccProjectUniqueName5 = KatabanWeb\\KatabanWeb.vbproj
+		SccProjectName5 = KatabanWeb
+		SccLocalPath5 = KatabanWeb
+		SccProjectUniqueName6 = KatabanWin\\KatabanWin.vbproj
+		SccProjectName6 = KatabanWin
+		SccLocalPath6 = KatabanWin
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE151698-3B73-4851-8EFA-18F787BDE45E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KatabanBusinessLogic</RootNamespace>
+    <AssemblyName>KatabanBusinessLogic</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>KatabanBusinessLogic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>KatabanBusinessLogic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\KatabanWcfService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\KatabanUtility.vb" />
+    <Compile Include="Managers\MenuManager.vb" />
+    <Compile Include="Managers\OptionManager.vb" />
+    <Compile Include="Managers\PriceManager.vb" />
+    <Compile Include="Managers\RodEndManager.vb" />
+    <Compile Include="Results\ElePatternCheckResult.vb" />
+    <Compile Include="Models\KatabanInfo.vb" />
+    <Compile Include="Models\PriceKeyInfo.vb" />
+    <Compile Include="Results\RodEndCheckResult.vb" />
+    <Compile Include="Models\RodEndInfoSelected.vb" />
+    <Compile Include="Models\SelectedInfo.vb" />
+    <Compile Include="OptionCheck\KHCylinderC5Check.vb" />
+    <Compile Include="PriceCalculations\KHPrice02.vb" />
+    <Compile Include="PriceCalculations\KHPrice03.vb" />
+    <Compile Include="PriceCalculations\KHPrice04.vb" />
+    <Compile Include="PriceCalculations\KHPrice05.vb" />
+    <Compile Include="PriceCalculations\KHPrice07.vb" />
+    <Compile Include="PriceCalculations\KHPrice08.vb" />
+    <Compile Include="PriceCalculations\KHPrice09.vb" />
+    <Compile Include="PriceCalculations\KHPrice10.vb" />
+    <Compile Include="PriceCalculations\KHPrice11.vb" />
+    <Compile Include="PriceCalculations\KHPrice12.vb" />
+    <Compile Include="PriceCalculations\KHPrice13.vb" />
+    <Compile Include="PriceCalculations\KHPrice14.vb" />
+    <Compile Include="PriceCalculations\KHPrice15.vb" />
+    <Compile Include="PriceCalculations\KHPrice17.vb" />
+    <Compile Include="PriceCalculations\KHPrice18.vb" />
+    <Compile Include="PriceCalculations\KHPrice19.vb" />
+    <Compile Include="PriceCalculations\KHPrice20.vb" />
+    <Compile Include="PriceCalculations\KHPrice21.vb" />
+    <Compile Include="PriceCalculations\KHPrice22.vb" />
+    <Compile Include="PriceCalculations\KHPrice23.vb" />
+    <Compile Include="PriceCalculations\KHPrice24.vb" />
+    <Compile Include="PriceCalculations\KHPrice25.vb" />
+    <Compile Include="PriceCalculations\KHPrice26.vb" />
+    <Compile Include="PriceCalculations\KHPrice27.vb" />
+    <Compile Include="PriceCalculations\KHPrice28.vb" />
+    <Compile Include="PriceCalculations\KHPrice29.vb" />
+    <Compile Include="PriceCalculations\KHPrice30.vb" />
+    <Compile Include="PriceCalculations\KHPrice31.vb" />
+    <Compile Include="PriceCalculations\KHPrice32.vb" />
+    <Compile Include="PriceCalculations\KHPrice33.vb" />
+    <Compile Include="PriceCalculations\KHPrice35.vb" />
+    <Compile Include="PriceCalculations\KHPrice36.vb" />
+    <Compile Include="PriceCalculations\KHPrice37.vb" />
+    <Compile Include="PriceCalculations\KHPrice38.vb" />
+    <Compile Include="PriceCalculations\KHPrice39.vb" />
+    <Compile Include="PriceCalculations\KHPrice40.vb" />
+    <Compile Include="PriceCalculations\KHPrice41.vb" />
+    <Compile Include="PriceCalculations\KHPrice42.vb" />
+    <Compile Include="PriceCalculations\KHPrice43.vb" />
+    <Compile Include="PriceCalculations\KHPrice46.vb" />
+    <Compile Include="PriceCalculations\KHPrice47.vb" />
+    <Compile Include="PriceCalculations\KHPrice48.vb" />
+    <Compile Include="PriceCalculations\KHPrice49.vb" />
+    <Compile Include="PriceCalculations\KHPrice50.vb" />
+    <Compile Include="PriceCalculations\KHPrice51.vb" />
+    <Compile Include="PriceCalculations\KHPrice53.vb" />
+    <Compile Include="PriceCalculations\KHPrice54.vb" />
+    <Compile Include="PriceCalculations\KHPrice55.vb" />
+    <Compile Include="PriceCalculations\KHPrice56.vb" />
+    <Compile Include="PriceCalculations\KHPrice58.vb" />
+    <Compile Include="PriceCalculations\KHPrice60.vb" />
+    <Compile Include="PriceCalculations\KHPrice62.vb" />
+    <Compile Include="PriceCalculations\KHPrice63.vb" />
+    <Compile Include="PriceCalculations\KHPrice64.vb" />
+    <Compile Include="PriceCalculations\KHPrice65.vb" />
+    <Compile Include="PriceCalculations\KHPrice66.vb" />
+    <Compile Include="PriceCalculations\KHPrice67.vb" />
+    <Compile Include="PriceCalculations\KHPrice68.vb" />
+    <Compile Include="PriceCalculations\KHPrice69.vb" />
+    <Compile Include="PriceCalculations\KHPrice70.vb" />
+    <Compile Include="PriceCalculations\KHPrice72.vb" />
+    <Compile Include="PriceCalculations\KHPrice73.vb" />
+    <Compile Include="PriceCalculations\KHPrice74.vb" />
+    <Compile Include="PriceCalculations\KHPrice75.vb" />
+    <Compile Include="PriceCalculations\KHPrice76.vb" />
+    <Compile Include="PriceCalculations\KHPrice77.vb" />
+    <Compile Include="PriceCalculations\KHPrice78.vb" />
+    <Compile Include="PriceCalculations\KHPrice79.vb" />
+    <Compile Include="PriceCalculations\KHPrice80.vb" />
+    <Compile Include="PriceCalculations\KHPrice81.vb" />
+    <Compile Include="PriceCalculations\KHPrice82.vb" />
+    <Compile Include="PriceCalculations\KHPrice83.vb" />
+    <Compile Include="PriceCalculations\KHPrice84.vb" />
+    <Compile Include="PriceCalculations\KHPrice85.vb" />
+    <Compile Include="PriceCalculations\KHPrice86.vb" />
+    <Compile Include="PriceCalculations\KHPrice87.vb" />
+    <Compile Include="PriceCalculations\KHPrice88.vb" />
+    <Compile Include="PriceCalculations\KHPrice90.vb" />
+    <Compile Include="PriceCalculations\KHPrice91.vb" />
+    <Compile Include="PriceCalculations\KHPrice92.vb" />
+    <Compile Include="PriceCalculations\KHPrice93.vb" />
+    <Compile Include="PriceCalculations\KHPrice94.vb" />
+    <Compile Include="PriceCalculations\KHPrice95.vb" />
+    <Compile Include="PriceCalculations\KHPrice97.vb" />
+    <Compile Include="PriceCalculations\KHPrice98.vb" />
+    <Compile Include="PriceCalculations\KHPrice99.vb" />
+    <Compile Include="PriceCalculations\KHPriceA0.vb" />
+    <Compile Include="PriceCalculations\KHPriceA1.vb" />
+    <Compile Include="PriceCalculations\KHPriceA2.vb" />
+    <Compile Include="PriceCalculations\KHPriceA3.vb" />
+    <Compile Include="PriceCalculations\KHPriceA4.vb" />
+    <Compile Include="PriceCalculations\KHPriceA5.vb" />
+    <Compile Include="PriceCalculations\KHPriceA6.vb" />
+    <Compile Include="PriceCalculations\KHPriceA7.vb" />
+    <Compile Include="PriceCalculations\KHPriceA8.vb" />
+    <Compile Include="PriceCalculations\KHPriceA9.vb" />
+    <Compile Include="PriceCalculations\KHPriceB0.vb" />
+    <Compile Include="PriceCalculations\KHPriceB1.vb" />
+    <Compile Include="PriceCalculations\KHPriceB2.vb" />
+    <Compile Include="PriceCalculations\KHPriceB3.vb" />
+    <Compile Include="PriceCalculations\KHPriceB4.vb" />
+    <Compile Include="PriceCalculations\KHPriceB7.vb" />
+    <Compile Include="PriceCalculations\KHPriceB9.vb" />
+    <Compile Include="PriceCalculations\KHPriceC0.vb" />
+    <Compile Include="PriceCalculations\KHPriceC1.vb" />
+    <Compile Include="PriceCalculations\KHPriceC2.vb" />
+    <Compile Include="PriceCalculations\KHPriceC3.vb" />
+    <Compile Include="PriceCalculations\KHPriceC4.vb" />
+    <Compile Include="PriceCalculations\KHPriceC5.vb" />
+    <Compile Include="PriceCalculations\KHPriceC6.vb" />
+    <Compile Include="PriceCalculations\KHPriceC7.vb" />
+    <Compile Include="PriceCalculations\KHPriceC8.vb" />
+    <Compile Include="PriceCalculations\KHPriceC9.vb" />
+    <Compile Include="PriceCalculations\KHPriceD0.vb" />
+    <Compile Include="PriceCalculations\KHPriceD1.vb" />
+    <Compile Include="PriceCalculations\KHPriceD2.vb" />
+    <Compile Include="PriceCalculations\KHPriceD4.vb" />
+    <Compile Include="PriceCalculations\KHPriceD5.vb" />
+    <Compile Include="PriceCalculations\KHPriceD6.vb" />
+    <Compile Include="PriceCalculations\KHPriceD7.vb" />
+    <Compile Include="PriceCalculations\KHPriceD8.vb" />
+    <Compile Include="PriceCalculations\KHPriceD9.vb" />
+    <Compile Include="PriceCalculations\KHPriceE0.vb" />
+    <Compile Include="PriceCalculations\KHPriceE1.vb" />
+    <Compile Include="PriceCalculations\KHPriceE2.vb" />
+    <Compile Include="PriceCalculations\KHPriceE3.vb" />
+    <Compile Include="PriceCalculations\KHPriceE5.vb" />
+    <Compile Include="PriceCalculations\KHPriceE6.vb" />
+    <Compile Include="PriceCalculations\KHPriceE7.vb" />
+    <Compile Include="PriceCalculations\KHPriceE8.vb" />
+    <Compile Include="PriceCalculations\KHPriceE9.vb" />
+    <Compile Include="PriceCalculations\KHPriceF0.vb" />
+    <Compile Include="PriceCalculations\KHPriceF1.vb" />
+    <Compile Include="PriceCalculations\KHPriceF2.vb" />
+    <Compile Include="PriceCalculations\KHPriceF3.vb" />
+    <Compile Include="PriceCalculations\KHPriceF4.vb" />
+    <Compile Include="PriceCalculations\KHPriceF5.vb" />
+    <Compile Include="PriceCalculations\KHPriceF6.vb" />
+    <Compile Include="PriceCalculations\KHPriceF7.vb" />
+    <Compile Include="PriceCalculations\KHPriceF8.vb" />
+    <Compile Include="PriceCalculations\KHPriceF9.vb" />
+    <Compile Include="PriceCalculations\KHPriceG0.vb" />
+    <Compile Include="PriceCalculations\KHPriceG1.vb" />
+    <Compile Include="PriceCalculations\KHPriceG2.vb" />
+    <Compile Include="PriceCalculations\KHPriceG3.vb" />
+    <Compile Include="PriceCalculations\KHPriceG4.vb" />
+    <Compile Include="PriceCalculations\KHPriceG5.vb" />
+    <Compile Include="PriceCalculations\KHPriceG6.vb" />
+    <Compile Include="PriceCalculations\KHPriceG7.vb" />
+    <Compile Include="PriceCalculations\KHPriceG8.vb" />
+    <Compile Include="PriceCalculations\KHPriceG9.vb" />
+    <Compile Include="PriceCalculations\KHPriceH0.vb" />
+    <Compile Include="PriceCalculations\KHPriceH1.vb" />
+    <Compile Include="PriceCalculations\KHPriceH2.vb" />
+    <Compile Include="PriceCalculations\KHPriceH3.vb" />
+    <Compile Include="PriceCalculations\KHPriceH4.vb" />
+    <Compile Include="PriceCalculations\KHPriceH5.vb" />
+    <Compile Include="PriceCalculations\KHPriceH6.vb" />
+    <Compile Include="PriceCalculations\KHPriceH7.vb" />
+    <Compile Include="PriceCalculations\KHPriceH8.vb" />
+    <Compile Include="PriceCalculations\KHPriceH9.vb" />
+    <Compile Include="PriceCalculations\KHPriceI0.vb" />
+    <Compile Include="PriceCalculations\KHPriceI1.vb" />
+    <Compile Include="PriceCalculations\KHPriceI2.vb" />
+    <Compile Include="PriceCalculations\KHPriceI3.vb" />
+    <Compile Include="PriceCalculations\KHPriceI4.vb" />
+    <Compile Include="PriceCalculations\KHPriceI5.vb" />
+    <Compile Include="PriceCalculations\KHPriceI6.vb" />
+    <Compile Include="PriceCalculations\KHPriceI7.vb" />
+    <Compile Include="PriceCalculations\KHPriceI8.vb" />
+    <Compile Include="PriceCalculations\KHPriceI9.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ0.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ1.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ2.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ3.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ4.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ5.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ6.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ7.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ8.vb" />
+    <Compile Include="PriceCalculations\KHPriceJ9.vb" />
+    <Compile Include="PriceCalculations\KHPriceK0.vb" />
+    <Compile Include="PriceCalculations\KHPriceK1.vb" />
+    <Compile Include="PriceCalculations\KHPriceK2.vb" />
+    <Compile Include="PriceCalculations\KHPriceK3.vb" />
+    <Compile Include="PriceCalculations\KHPriceK4.vb" />
+    <Compile Include="PriceCalculations\KHPriceK5.vb" />
+    <Compile Include="PriceCalculations\KHPriceK6.vb" />
+    <Compile Include="PriceCalculations\KHPriceK7.vb" />
+    <Compile Include="PriceCalculations\KHPriceK8.vb" />
+    <Compile Include="PriceCalculations\KHPriceK9.vb" />
+    <Compile Include="PriceCalculations\KHPriceL0.vb" />
+    <Compile Include="PriceCalculations\KHPriceL1.vb" />
+    <Compile Include="PriceCalculations\KHPriceL3.vb" />
+    <Compile Include="PriceCalculations\KHPriceL4.vb" />
+    <Compile Include="PriceCalculations\KHPriceL5.vb" />
+    <Compile Include="PriceCalculations\KHPriceL7.vb" />
+    <Compile Include="PriceCalculations\KHPriceL8.vb" />
+    <Compile Include="PriceCalculations\KHPriceL9.vb" />
+    <Compile Include="PriceCalculations\KHPriceM0.vb" />
+    <Compile Include="PriceCalculations\KHPriceM1.vb" />
+    <Compile Include="PriceCalculations\KHPriceM2.vb" />
+    <Compile Include="PriceCalculations\KHPriceM3.vb" />
+    <Compile Include="PriceCalculations\KHPriceM4.vb" />
+    <Compile Include="PriceCalculations\KHPriceM5.vb" />
+    <Compile Include="PriceCalculations\KHPriceM6.vb" />
+    <Compile Include="PriceCalculations\KHPriceM7.vb" />
+    <Compile Include="PriceCalculations\KHPriceM8.vb" />
+    <Compile Include="PriceCalculations\KHPriceM9.vb" />
+    <Compile Include="PriceCalculations\KHPriceN0.vb" />
+    <Compile Include="PriceCalculations\KHPriceN1.vb" />
+    <Compile Include="PriceCalculations\KHPriceN2.vb" />
+    <Compile Include="PriceCalculations\KHPriceN3.vb" />
+    <Compile Include="PriceCalculations\KHPriceN4.vb" />
+    <Compile Include="PriceCalculations\KHPriceN6.vb" />
+    <Compile Include="PriceCalculations\KHPriceN7.vb" />
+    <Compile Include="PriceCalculations\KHPriceN8.vb" />
+    <Compile Include="PriceCalculations\KHPriceN9.vb" />
+    <Compile Include="PriceCalculations\KHPriceO0.vb" />
+    <Compile Include="PriceCalculations\KHPriceO2.vb" />
+    <Compile Include="PriceCalculations\KHPriceO3.vb" />
+    <Compile Include="PriceCalculations\KHPriceO5.vb" />
+    <Compile Include="PriceCalculations\KHPriceO6.vb" />
+    <Compile Include="PriceCalculations\KHPriceO7.vb" />
+    <Compile Include="PriceCalculations\KHPriceO8.vb" />
+    <Compile Include="PriceCalculations\KHPriceO9.vb" />
+    <Compile Include="PriceCalculations\KHPriceOA.vb" />
+    <Compile Include="PriceCalculations\KHPriceP0.vb" />
+    <Compile Include="PriceCalculations\KHPriceP1.vb" />
+    <Compile Include="PriceCalculations\KHPriceP2.vb" />
+    <Compile Include="PriceCalculations\KHPriceP3.vb" />
+    <Compile Include="PriceCalculations\KHPriceP4.vb" />
+    <Compile Include="PriceCalculations\KHPriceP5.vb" />
+    <Compile Include="PriceCalculations\KHPriceP6.vb" />
+    <Compile Include="PriceCalculations\KHPriceP7.vb" />
+    <Compile Include="PriceCalculations\KHPriceP8.vb" />
+    <Compile Include="PriceCalculations\KHPriceP9.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ0.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ1.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ2.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ3.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ4.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ5.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ6.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ7.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ8.vb" />
+    <Compile Include="PriceCalculations\KHPriceQ9.vb" />
+    <Compile Include="PriceCalculations\KHPriceR2.vb" />
+    <Compile Include="PriceCalculations\KHPriceR6.vb" />
+    <Compile Include="PriceCalculations\KHPriceR7.vb" />
+    <Compile Include="PriceCalculations\KHPriceR8.vb" />
+    <Compile Include="PriceCalculations\KHPriceR9.vb" />
+    <Compile Include="PriceCalculations\KHPriceS1.vb" />
+    <Compile Include="PriceCalculations\KHPriceS2.vb" />
+    <Compile Include="Resources\Error\Errors.Designer.vb">
+      <DependentUpon>Errors.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Managers\SeriesManager.vb" />
+    <Compile Include="Managers\UserManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\Message\Message.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Results\LoginResult.vb" />
+    <Compile Include="Results\OptionCheckResult.vb" />
+    <Compile Include="Results\ProcessResult.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Error\Errors.en-US.resx" />
+    <EmbeddedResource Include="Resources\Error\Errors.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Error\Errors.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\Error\Errors.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Errors.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Error\Errors.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\Error\Errors.zh-TW.resx" />
+    <EmbeddedResource Include="Resources\Message\Message.en-US.resx" />
+    <EmbeddedResource Include="Resources\Message\Message.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Message\Message.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\Message\Message.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Message\Message.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\Message\Message.zh-TW.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\DbAccessService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\DbAccessService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\DbAccessService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\DbAccessService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\DbService.wsdl" />
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.ElePatternInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.KatabanStructureInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.KatabanStructureOptionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.KatabanStructureOptionInfoAllSeqNo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.MathTypeInfoFobPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.MathTypeInfoLocalPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.PriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.QuantityUnitInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.RodEndExternalFormInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.RodEndInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.ScrewPriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.SeriesInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.SeriesInfoFullKataban.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.StockInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.StrokeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.UpdateHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KatabanWcfService\KatabanBusinessLogic.KatabanWcfService.VoltageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KatabanCommon\KatabanCommon.vbproj">
+      <Project>{a98cf183-327d-42f8-b953-dbb2aacdcdb0}</Project>
+      <Name>KatabanCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\KatabanWcfService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KatabanWcfService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KatabanWcfService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KatabanWcfService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
